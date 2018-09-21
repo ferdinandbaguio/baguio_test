@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <input type="button" value="Join Us" id="loginButton" class="mt-5"
-                    onclick="window.location='/request/create';" ><br>
+                    onclick="window.location='/register';" ><br>
                 </div>
             </form>
             </center>

@@ -3,6 +3,7 @@
 @section('content')
     <h1><i>Reconnect through us</i></h1>
     {!! Form::open(['url' => '#', 'method' => 'POST']) !!}
+        {{ Form::hidden('role', 'Alumni') }} 
         <div class="form-group">
             <b>{{Form::label('idNumber', 'ID Number')}}</b>
                 {{Form::number('idNumber', '', 
@@ -19,16 +20,16 @@
         <div class="form-group">
             <b>{{Form::label('name', 'Name')}}</b>
             <br>
-                {{Form::label('firstName', 'First')}}
-                {{Form::text('firstName', '', ['class' => 'form-control', 
+                {{Form::label('firstname', 'First')}}
+                {{Form::text('firstname', '', ['class' => 'form-control', 
                 'placeholder' => 'Please type in your First Name'])}}
 
-                {{Form::label('middleName', 'Middle')}}
-                {{Form::text('middleName', '', ['class' => 'form-control', 
+                {{Form::label('middlename', 'Middle')}}
+                {{Form::text('middlename', '', ['class' => 'form-control', 
                 'placeholder' => 'Please type in your Middle Name'])}}
 
-                {{Form::label('lastName', 'Last')}}  
-                {{Form::text('lastName', '', ['class' => 'form-control', 
+                {{Form::label('lastname', 'Last')}}  
+                {{Form::text('lastname', '', ['class' => 'form-control', 
                 'placeholder' => 'Please type in your Last Name'])}}
         </div>
         <div class="form-group">
