@@ -19,7 +19,6 @@ class RegisterController extends Controller
 	        'role' 				=> 'required',
 	        'status' 			=> 'required'
     	]);
-
     	User::create($data);
     }
 }
