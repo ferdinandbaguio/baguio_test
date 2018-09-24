@@ -2,8 +2,10 @@
 
 @section('content')
     <h1><i>Reconnect through us</i></h1>
-    {!! Form::open(['url' => '#', 'method' => 'POST']) !!}
+    {!! Form::open(['route' => 'register.submit', 'method' => 'POST']) !!}
         {{ Form::hidden('role', 'Alumni') }} 
+        {{ Form::hidden('status', 'Pending') }} 
+        
         <div class="form-group">
             <b>{{Form::label('idnumber', 'ID Number')}}</b>
                 {{Form::number('idnumber', '', 
