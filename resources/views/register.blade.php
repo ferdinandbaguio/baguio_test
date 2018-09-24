@@ -5,8 +5,8 @@
     {!! Form::open(['url' => '#', 'method' => 'POST']) !!}
         {{ Form::hidden('role', 'Alumni') }} 
         <div class="form-group">
-            <b>{{Form::label('idNumber', 'ID Number')}}</b>
-                {{Form::number('idNumber', '', 
+            <b>{{Form::label('idnumber', 'ID Number')}}</b>
+                {{Form::number('idnumber', '', 
                 ['class' => 'form-control', 'placeholder' => 'Please type in your ID Number'])}}
         </div>
         <div class="form-group">

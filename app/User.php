@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'idNumber',
+        'idnumber',
         'password',
         'gender',
         'firstname',
@@ -25,6 +25,7 @@ class User extends Authenticatable
         'picture',
         'yearLevel',
         'role',
+        'status',
         'employmentStatus',
         'updateStatus',
         'position'

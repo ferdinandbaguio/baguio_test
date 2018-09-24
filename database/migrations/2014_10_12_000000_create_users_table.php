@@ -30,6 +30,8 @@ class CreateUsersTable extends Migration
                                   'Alumni', 'Admin',
                                   'Coordinator', 'Chair']);
 
+            $table->enum('status', ['Approved', 'Pending']);
+
             //FOR TEACHERS!!
             $table->enum('employmentStatus', ['Employed', 'Unemployeed', 
                                               'Part-Time Job', 'Summer Job', 

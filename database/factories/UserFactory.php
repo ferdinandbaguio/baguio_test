@@ -15,10 +15,11 @@ use Faker\Generator as Faker;
 
 $factory->define(App\User::class, function (Faker $faker) {
 		$arrayValues = ['Student', 'Teacher',
-	                                  'Alumni', 'Admin',
-	                                  'Coordinator', 'Chair'];
+	                    'Alumni', 'Admin',
+	                    'Coordinator', 'Chair'];
 	    $idnumber = '14'. $faker->unique()->numberBetween($min = 100000 , $max = 999999);
-
+	    $role = $faker->randomElement($arrayValues);
+	   
 	    return [
 	        'firstname'     => $faker->firstName,
             'middlename'    => $faker->lastName,
@@ -28,7 +29,8 @@ $factory->define(App\User::class, function (Faker $faker) {
             'password'      => bcrypt($idnumber),
             'description'   => $faker->paragraph,
             'yearLevel'     => '4',    
-            'role'      => $faker->randomElement($arrayValues),
+            'role'      	=> $role,
+            'status'		=>  $status = ($role === 'Alumni' ? 'Pending' : 'Approved'),
 	        'remember_token' => str_random(10),
 	    ];
 });

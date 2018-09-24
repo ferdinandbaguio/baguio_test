@@ -14,8 +14,13 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-      //   	
-            return redirect()->route('welcome');
+            
+            if(auth()->user()->status == 'Approved'){
+                return redirect()->route('welcome');
+            }else{
+                dd('not yet approved!@');
+                 return redirect()->back();
+            }
         }
         return redirect()->back();
     }
